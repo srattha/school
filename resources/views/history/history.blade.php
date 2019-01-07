@@ -12,7 +12,7 @@
   h5{
     text-shadow : 0px -1px 1px #000;
   }
-</style>
+</style> 
 @endsection
 @section('content')
  <div>
