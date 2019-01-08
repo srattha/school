@@ -19,3 +19,10 @@ Route::get('/history','ViewController@history')->name('history');
 Route::get('/staff','ViewController@staff')->name('staff');
 Route::get('media_group', 'ViewController@media_group')->name('media_group');
 Route::get('media', 'ViewController@media')->name('media');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Admin
+
+Route::get('/admin-index', 'AdminController@index')->name('admin_home');

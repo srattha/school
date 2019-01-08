@@ -33,37 +33,40 @@
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #38910f;">
   <div class="container">
-  <div class="container-fluid">
-  
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ url('/') }}" style=" color: #fefefe"> โรงเรียนอนุบาลเทศบาลตำบลสากเหล็ก </a>
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ url('/') }}" style=" color: #fefefe"> โรงเรียนอนุบาลเทศบาลตำบลสากเหล็ก </a>
+      </div>
+
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+         <li class="font-size"><a href="/">หน้าแรก</a></li>
+         <li class="font-size"><a href="/history">ประวัติ</a></li>
+         <li class="font-size"><a href="/staff">บุคลากร</a></li>
+         <li class="font-size"><a href="media_group">อัลบั้มรูป</a></li>
+         <li class="font-size"><a href="#">วิสัยทัศ</a></li>
+         <li class="font-size"><a href="#">หลักสูตรสถานศึกษา</a></li>
+         <li class="font-size"><a href="#">ติดต่อเรา</a></li>
+
+
+       </ul>
+       <ul class="nav navbar-nav pull-right">
+        <li class=""><a href="#" data-toggle="modal" data-target="#myModal">เข้าสู่ระบบ</a></li>
+        <li class=""><a href="#">สมัคสมาชิก</a></li>
+      </ul>
+
     </div>
 
-   
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-
-       <li class="font-size"><a href="/">หน้าแรก</a></li>
-       <li class="font-size"><a href="/history">ประวัติ</a></li>
-       <li class="font-size"><a href="/staff">บุคลากร</a></li>
-       <li class="font-size"><a href="media_group">อัลบั้มรูป</a></li>
-       <li class="font-size"><a href="#">วิสัยทัศ</a></li>
-       <li class="font-size"><a href="#">หลักสูตรสถานศึกษา</a></li>
-       <li class="font-size"><a href="#">ติดต่อเรา</a></li>
-
-
-     </ul>
-     <ul class="nav navbar-nav pull-right">
-      <li class=""><a href="#">Ligin</a></li>
-    </ul>
-
-   </div>
- </div>
- </div>
+  </div>
+</div>
 </nav>
+

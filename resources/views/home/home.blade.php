@@ -10,8 +10,8 @@
 @endsection
 @section('content')
 <!-- <div ng-controller="GuestController"> -->
- <div >
-   <img src="https://tak.rmutl.ac.th/assets/img/website-logo-th.jpg" class="img-responsive" />
+ <div style="padding-top: 50px;">
+   <img src="https://www.torpentorcafe.com/img/v.jpg" class="img-responsive" />
      <br>
      <div class="row">
       <div class="col-md-6">
