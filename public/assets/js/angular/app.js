@@ -14,7 +14,7 @@ app.config(function($httpProvider) {
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
     var auth = btoa(username+":"+password);
     $httpProvider.defaults.headers.common['Authorization'] = 'Basic ' + auth;
-}); 
+});
 app.run(function($rootScope) {
 	$rootScope.MEDIA_PATH = MEDIA_PATH;
 	$rootScope.EMERGENCY_PATH = EMERGENCY_PATH;
@@ -29,5 +29,5 @@ app.run(function($rootScope) {
 //     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 //     var auth = btoa(username+":"+password);
 //     $httpProvider.defaults.headers.common['Authorization'] = 'Basic ' + auth;
-// }); 
+// });
 // });

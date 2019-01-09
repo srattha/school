@@ -27,7 +27,7 @@
       <div class="card card-register mx-auto mt-5">
         <div class="card-header">Register an Account</div>
         <div class="card-body">
-           <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+         <form class="form-horizontal" method="POST" action="{{ route('register') }}">
             {{ csrf_field() }}
             <div class="form-group">
               <div class="form-row">

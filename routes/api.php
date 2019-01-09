@@ -31,3 +31,7 @@ Route::put("v1/media","Api\MediaController@add");
 Route::post("v1/media/delete","Api\MediaController@delete");
 // home
 Route::post("v1/home","Api\HomeController@lists");
+//admin
+
+Route::post("admin-user","Api\UserController@lists");
+Route::post("admin-user-add","Api\UserController@add");
