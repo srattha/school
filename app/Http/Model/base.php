@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class base extends Model
 {
   var $columnList = [];
-  var $pkey = "id"; 
-  var $orderBy = "asc"; 
+  var $pkey = "id";
+  var $orderBy = "asc";
 
   function __construct(){
     $table = $this->getTable();
@@ -39,7 +39,7 @@ class base extends Model
     }
   }
 
-  function _add($_option=NULL){
+  function _update($_option=NULL){
     $option = [];
 
     //check json array column and check data empty
@@ -55,8 +55,6 @@ class base extends Model
       $update = $this->where($this->pkey, $option[$this->pkey]);
       $update->update($option);
       return $option[$this->pkey];
-    }else{
-      return $this->insertGetId($option);
     }
   }
 

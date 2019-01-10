@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dashboard</title>
+  <title>@yield('title')</title>
 
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,7 @@
 <body id="page-top">
  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-  <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+  <a class="navbar-brand mr-1" href="index.html">Admin</a>
 
   <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
     <i class="fas fa-bars"></i>
@@ -124,10 +124,10 @@
       <i class="fas fa-users"></i>
       <span>User</span></a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="tables.html">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Tables</span></a>
+    <li class="nav-item {{ Request::is('admin-news') ? 'active' : '' }}">
+      <a class="nav-link" href="admin-news">
+        <i class="fas fa-newspaper"></i>
+        <span>News</span></a>
       </li>
     </ul>
     <div id="content-wrapper">

@@ -1,19 +1,8 @@
 
 @extends('admin.master')
+@section('title','User')
+
 @section('css')
-<style type="text/css">
-table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
- right: 1em;
- content: none;
-}
-table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after{
- content: none;
-}
-table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled{
- cursor: none;
-}
-}
-</style>
 @endsection
 @section('content')
 <div ng-controller="UserController">
@@ -27,7 +16,7 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
    <button type="button" class="btn btn-info" ng-click="modal()"><i class="fas fa-plus-square"></i> Create User</button></div>
    <div class="card-body">
     <div class="table-responsive">
-     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+     <table class="table table-bordered" width="100%" cellspacing="0">
       <thead>
        <tr>
         <th></th>
@@ -40,7 +29,7 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
       </thead>
       <tbody>
        <tr ng-repeat="u in lists" >
-        <td>@{{u.id}} </td>
+        <td>@{{$index + pageStartFrom}} </td>
         <td>@{{u.name}} </td>
         <td>@{{u.email}} </td>
         <td>@{{u.created_at | convertToDate | date:'dd MMM yyyy hh:mm a'}}</td>
@@ -53,6 +42,13 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
       </tbody>
      </table>
     </div>
+    <div >
+          <ul class="pagination pagination-flat">
+          <li><a href="#">&lsaquo;</a></li>
+          <li ng-repeat="r in range" ng-class="{active : currentPage === @{{r.page}}}" ><a href="javascript:void(0)" ng-click="changePage(r.url)">@{{r.page}}</a></li>
+          <li><a href="#">&rsaquo;</a></li>
+        </ul>
+        </div>
    </div>
   </div>
   <!-- Modal -->
@@ -89,13 +85,13 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
        </div>
        <div class="form-group">
         <div class="form-label-group">
-         <input type="password" id="inputPassword" class="form-control" ng-model="form.password" placeholder="Password" required="required">
+         <input type="password" id="inputPassword" class="form-control" ng-model="form.password" placeholder="Password">
          <label for="inputPassword">Password</label>
         </div>
        </div>
        <div class="form-group">
         <div class="form-label-group">
-         <input type="password" id="confirmPassword" class="form-control" ng-model="form.passwordConfirm" placeholder="Confirm password" required="required">
+         <input type="password" id="confirmPassword" class="form-control" ng-model="form.passwordConfirm" placeholder="Confirm password">
          <label for="confirmPassword">Confirm password</label>
         </div>
        </div>
@@ -112,11 +108,10 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
   </div>
  </div>
 
-
-
-
  @endsection
  @section('script')
  <script type="text/javascript" src="{{ asset('assets/js/angular/controller/UserController.js') }}"></script>
- <script type="text/javascript"></script>
+ <script type="text/javascript">
+
+ </script>
  @endsection

@@ -20,6 +20,10 @@ class AdminController extends Controller
     {
         return view('admin.user.index');
     }
+    public function news()
+    {
+        return view('admin.news.index');
+    }
 
 
 

@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
-
+//use Illuminate\Http\Request;
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Method: GET,POST,PUT,PATCH,DELETE');
+header( 'Access-Control-Allow-Headers: Authorization, Content-Type' );
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,5 +35,7 @@ Route::post("v1/media/delete","Api\MediaController@delete");
 Route::post("v1/home","Api\HomeController@lists");
 //admin
 
-Route::post("admin-user","Api\UserController@lists");
-Route::post("admin-user-add","Api\UserController@add");
+Route::get("admin-user","Api\UserController@lists");
+Route::put("admin-user-add","Api\UserController@add");
+Route::put("admin-user-update","Api\UserController@update");
+Route::post("admin-user-delete","Api\UserController@delete");
