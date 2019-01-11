@@ -39,3 +39,8 @@ Route::get("admin-user","Api\UserController@lists");
 Route::put("admin-user-add","Api\UserController@add");
 Route::put("admin-user-update","Api\UserController@update");
 Route::post("admin-user-delete","Api\UserController@delete");
+
+Route::get("admin-news","Api\NewsController@lists");
+Route::put("admin-news-add","Api\NewsController@add");
+Route::put("admin-news-update","Api\NewsController@update");
+Route::post("admin-news-delete","Api\NewsController@delete");

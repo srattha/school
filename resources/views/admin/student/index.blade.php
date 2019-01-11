@@ -1,6 +1,6 @@
 
 @extends('admin.master')
-@section('title','News')
+@section('title','ข้อมูลนักเรียน')
 @section('css')
 <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 @endsection
@@ -8,12 +8,12 @@
 <div ng-controller="NewsController">
  <ol class="breadcrumb">
   <li class="breadcrumb-item">
-   <a href="#">News</a>
+   <a href="#">ข้อมูลนักเรียน</a>
  </li>
 </ol>
 <div class="card mb-3">
   <div class="card-header">
-   <button type="button" class="btn btn-info" ng-click="modal()"><i class="fas fa-plus-square"></i> Create News</button></div>
+   <button type="button" class="btn btn-info" ng-click="modal()"><i class="fas fa-plus-square"></i> เพิ่ม</button></div>
    <div class="card-body">
     <div class="row">
      <div class="col-md-4">
@@ -38,7 +38,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="u in lists | filter:query">
+   <!--  <tr ng-repeat="u in lists | filter:query">
       <td>@{{$index +1}} </td>
       <td>@{{u.date}} </td>
       <td>@{{u.news}} </td>
@@ -48,7 +48,7 @@
        <a href="javascript:void(0)" ng-click="delete(u.id)" class="text-danger"><i class="fas fa-trash-alt"></i></a>
        <a href="javascript:void(0)" ng-click="modal(u)" class="text-danger"><i class="fas fa-edit"></i></a>
      </th>
-   </tr>
+   </tr> -->
  </tbody>
 </table>
 </div>
